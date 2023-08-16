@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+    {% block murat %}
+    {% from "includes/formhelpers.html" import render_field %}
+        <h3>Register</h3>
+        <hr>
+        <form method=post>
+          <dl>
+            {{ render_field(form.username) }}
+            {{ render_field(form.email) }}
+            {{ render_field(form.password) }}
+            {{ render_field(form.confirm) }}
+          </dl>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    {% endblock %}
